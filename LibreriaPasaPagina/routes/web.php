@@ -1,7 +1,8 @@
 <?php
 
+use App\Http\Controllers\LibroController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::resource('libros', LibroController::class);
+
+Route::get('libros/{libro}/confirmDelete', [LibroController::class, 'confirmDelete'])->name('libros.confirmDelete');
