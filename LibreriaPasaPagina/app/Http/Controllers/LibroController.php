@@ -62,4 +62,10 @@ class LibroController extends Controller
     {
         //
     }
+
+    public function confirmDelete(Libro $libro)
+    {
+        //
+    }
+
 }
